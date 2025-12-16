@@ -30,7 +30,7 @@
   \AtEndOfPackage{%
     \RequirePackage{ifxetex}
     \RequirePackage{xeCJK}
-    
+
     % os specific font setting
     \ifwindows
         \setCJKmainfont{SimSun}
@@ -140,6 +140,13 @@
   \renewcommand{\colorlogoPath}{src/ZJUT/color-logo.png}  % path to the logo image with background color
   \renewcommand{\translogoPath}{src/ZJUT/trans-logo.png}  % path to the logo image with transparent background
   \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
+}
+
+\DeclareOption{xju}{
+    \renewcommand{\maincolorRGB}{150, 30, 25}
+    \renewcommand{\colorlogoPath}{src/XJU/color-logo.png}
+    \renewcommand{\translogoPath}{src/XJU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/XJU/background.png}
 }
 
 \ProcessOptions\relax
@@ -343,7 +350,7 @@
     \begingroup
         \setbeamertemplate{footline}{}
         \themecolor{colorbg}
-        
+
         \begin{frame}{}
             \centering
             \begin{minipage}{\textwidth}
